@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    width: 100%;
+  }
+  nav {
+    background-color: black;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 100px;
+    font-size: 18px;
+  }
+  h1 {
+    text-align: center;
+    margin: 30px 0;
+  }
+  
+  .contenido {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 40px;
+    gap: 40px;
+  }
+  
+  .imagen img {
+    max-width: 50000px;
+    width: 120%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .texto {
+    max-width: 500px;
+    text-align: justify;
+  }

@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav {
+    background-color: black;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 100px;
+    font-size: 18px;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    gap: 40px;
+  }
+  
+  .text-section {
+    width: 60%;
+  }
+  
+  .text-section h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+  
+  .text-section p {
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+  
+  .image-section {
+    width: 35%;
+  }
+  
+  .image-section img {
+    width: 80%;
+    border-radius: 10px;
+  }
