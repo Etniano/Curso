@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css" />
+</head>
+<body>
+  <header>
+    <h1>Mi Portfolio</h1>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#sobre-mi">Sobre Mí</a>
+      <a href="#tecnologias">Tecnologías</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section id="inicio">
+    <h2>¡Hola! Soy David Framit</h2>
+    <p>Bienvenido a mi portfolio personal. Aquí muestro lo que me apasiona y en lo que estoy trabajando.</p>
+  </section>
+
+  <section id="sobre-mi">
+    <h2>Sobre Mí</h2>
+    <p>Soy un entusiasta de la tecnología con interés en la impresión 3D, el desarrollo web y la electrónica.</p>
+    <p>Email: tuemail@dominio.com</p>
+  </section>
+
+  <section id="tecnologias">
+    <h2>Tecnologías que Me Gustan</h2>
+    <div class="tech">
+      <div class="tech-item">
+        <h3>🧱 Impresión 3D</h3>
+        <p>Tipo: Hobbie </p>
+      </div>
+      <div class="tech-item">
+        <h3>🌐 Desarrollo Web</h3>
+        <p>Tipo: Frontend/ Backend</p>
+      </div>
+      <div class="tech-item">
+        <h3>🔌 Electrónica</h3>
+        <p>Tipo: Hobbie </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="proyectos">
+    <h2>Proyectos</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Proyecto Web Portfolio</h3>
+        <p>Descripción: Portfolio personal con HTML, CSS y animaciones.</p>
+        <p>Tecnologías: HTML, CSS</p>
+        <p><a href="https://github.com/Etniano/Curso.git" target="_blank">Repositorio</a> | <a href="https://Elportfolio.com" target="_blank">Web</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <form id="contactForm">
+      <input type="text" name="nombre" placeholder="Tu nombre" required />
+      <input type="email" name="email" placeholder="Tu correo" required />
+      <textarea name="mensaje" rows="5" placeholder="Tu mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 David Framit. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="portfolio.js"></script>
+</body>
+</html>
