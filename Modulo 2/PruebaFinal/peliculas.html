@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gestor de Películas</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav>
+    <h1>Gestor de Películas</h1>
+    <ul>
+      <li><a href="#" onclick="showSection('home')">Inicio</a></li>
+      <li><a href="#" onclick="showSection('movies')">Películas</a></li>
+      <li><a href="#" onclick="showSection('professionals')">Profesionales</a></li>
+    </ul>
+  </nav>
+
+  <section id="home" class="active">
+    <h2>Bienvenido</h2>
+    <p>Usa el menú para navegar entre secciones.</p>
+  </section>
+
+  <section id="movies">
+    <h2>Películas</h2>
+    <div id="movie-list" class="grid"></div>
+
+    <form id="movieForm">
+      <h3>Añadir nueva película</h3>
+      <input type="text" name="title" placeholder="Título" required />
+      <input type="number" name="releaseYear" placeholder="Año" required />
+      <input type="text" name="nationality" placeholder="Nacionalidad" required />
+      <input type="text" name="genre" placeholder="Género" required />
+      <input type="url" name="photo" placeholder="URL de la imagen" />
+      <button type="submit">Agregar película</button>
+    </form>
+  </section>
+
+  <section id="professionals">
+    <h2>Profesionales</h2>
+    <div id="professional-list" class="grid"></div>
+  </section>
+
+  <script src="myp.js"></script>
+</body>
+</html>
