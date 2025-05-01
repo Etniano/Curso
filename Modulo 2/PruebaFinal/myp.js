@@ -25,12 +25,10 @@ class Movie {
   }
   
   const movies = [
-    new Movie("Volver", 2006, "España", "Drama", "volver.jpg"),
-  ];
+    new Movie("Volver", 2006, "España", "Drama", "volver.jpg"),];
   
   const professionals = [
-    new Professional("Pedro Almodóvar", 75, 70, 170, false, "Español", 2, "Director","Pedro.jpg")
-  ];
+    new Professional("Pedro Almodóvar", 75, 70, 170, false, "Español", 2, "Director","Pedro.jpg")];
   
   function showSection(id) {
     document.querySelectorAll("section").forEach(section => section.classList.remove("active"));
