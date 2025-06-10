@@ -1,0 +1,34 @@
+<div class="profile-container">
+  <!-- Caja de datos -->
+  <div class="profile-card">
+    <img [src]="usuario.Photo" alt="Foto de perfil" />
+    <h2>{{ usuario.Name }} {{ usuario.Last_name }}</h2>
+    <p><strong>Nombre:</strong> {{ usuario.Name }}</p>
+    <p><strong>Apellidos:</strong> {{ usuario.Last_name }}</p>
+    <p><strong>Email:</strong> {{ usuario.Email }}</p>
+  </div>
+
+  <!-- Caja de formulario -->
+  <div class="profile-form">
+    <h3>Editar Perfil</h3>
+    <form (ngSubmit)="modificarUsuario()">
+      <label>Nombre:
+        <input [(ngModel)]="usuario.Name" name="name" />
+      </label>
+
+      <label>Apellidos:
+        <input [(ngModel)]="usuario.Last_name" name="lastName" />
+      </label>
+
+      <label>Email:
+        <input [(ngModel)]="usuario.Email" name="email" />
+      </label>
+
+      <label>URL Foto:
+        <input [(ngModel)]="usuario.Photo" name="photo" />
+      </label>
+
+      <button type="button" (click)="modificarUsuario()">Modificar</button>
+    </form>
+  </div>
+</div>

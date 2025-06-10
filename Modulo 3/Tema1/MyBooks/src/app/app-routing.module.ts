@@ -3,12 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { AboutComponent } from './pages/about/about.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent }, // Página principal
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'about', component: AboutComponent },
-  { path: '**', redirectTo: '', pathMatch: 'full' } // Redirigir cualquier ruta no encontrada a Home
+  { path: 'profile', component: ProfileComponent }
 ];
 
 @NgModule({
