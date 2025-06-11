@@ -1,1 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  background: url('assets/fondo.png');
+  background-size: cover;
+  backdrop-filter: blur(0px);
+  margin: 0;
+  font-family: Arial, sans-serif;
+}

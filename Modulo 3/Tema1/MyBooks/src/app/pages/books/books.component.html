@@ -1,0 +1,30 @@
+<section class="books-section">
+
+  <h2>Catálogo de Libros</h2>
+
+  <!-- Formulario de alta -->
+  <form class="formulario" (ngSubmit)="agregarLibro()">
+    <input type="text" placeholder="Título" [(ngModel)]="nuevoLibro.title" name="title" required />
+    <input type="text" placeholder="Autor" [(ngModel)]="nuevoLibro.author" name="author" required />
+    <input type="number" placeholder="Precio" [(ngModel)]="nuevoLibro.price" name="price" required />
+    <input type="text" placeholder="URL de imagen" [(ngModel)]="nuevoLibro.photo" name="photo" required />
+    <button type="submit">Añadir libro</button>
+  </form>
+
+  <!-- Contenedor de cards -->
+  <div *ngIf="books.length > 0; else sinLibros" class="contenedor-cards">
+    <div class="card" *ngFor="let libro of books">
+      <img [src]="libro.photo" alt="{{ libro.title }}" />
+      <h3>{{ libro.title }}</h3>
+      <p><strong>Autor:</strong> {{ libro.author }}</p>
+      <p><strong>Precio:</strong> {{ libro.price | currency:'EUR' }}</p>
+      <p><strong>ID Libro:</strong> {{ libro.id_book }}</p>
+      <p><strong>ID Usuario:</strong> {{ libro.id_user }}</p>
+    </div>
+  </div>
+
+  <ng-template #sinLibros>
+    <p>No hay libros registrados. Añade alguno para comenzar 📚</p>
+  </ng-template>
+
+</section>
