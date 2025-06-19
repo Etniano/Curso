@@ -20,6 +20,9 @@ export class BooksComponent {
     );
 
     this.books.push(nuevo);
-    this.nuevoLibro = new Book('', '', 0, ''); // limpiar el formulario
+    this.nuevoLibro = new Book('', '', 0, '');
   }
+  eliminarLibro(id: number): void {
+  this.books = this.books.filter(libro => libro.id_book !== id);
+}
 }

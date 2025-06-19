@@ -1,0 +1,47 @@
+.card {
+  background-color: #000000;
+  width: 260px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-header img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  color: #3f51b5;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.btn-cerrar {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: #1e9b24;
+  cursor: pointer;
+}
+
+.btn-cerrar:hover {
+  color: #4735e5;
+}

@@ -1,0 +1,14 @@
+<div class="card">
+  <button class="btn-cerrar" (click)="eliminarLibro()">✕</button>
+  <div class="card-header">
+    <img [src]="libro.photo" alt="{{ libro.title }}" />
+  </div>
+  <div class="card-body">
+    <h3 class="card-title">{{ libro.title }}</h3>
+    <p><strong>Autor:</strong> {{ libro.author }}</p>
+    <p><strong>Precio:</strong> {{ libro.price | currency:'EUR' }}</p>
+    <p><strong>ID Libro:</strong> {{ libro.id_book }}</p>
+    <p><strong>ID Usuario:</strong> {{ libro.id_user }}</p>
+  </div>
+</div>
+
