@@ -1,28 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Book } from '../../models/book';
+import { BooksService } from '../../shared/books.service';
 
 @Component({
   selector: 'app-books',
   templateUrl: './books.component.html',
   styleUrls: ['./books.component.css']
 })
-export class BooksComponent {
+export class BooksComponent implements OnInit {
   books: Book[] = [];
 
-  nuevoLibro: Book = new Book('', '', 0, '');
+  constructor(private booksService: BooksService) {}
 
-  agregarLibro(): void {
-    const nuevo = new Book(
-      this.nuevoLibro.title,
-      this.nuevoLibro.author,
-      this.nuevoLibro.price,
-      this.nuevoLibro.photo
-    );
-
-    this.books.push(nuevo);
-    this.nuevoLibro = new Book('', '', 0, '');
+  ngOnInit(): void {
+    this.books = this.booksService.getAll();
   }
+
   eliminarLibro(id: number): void {
-  this.books = this.books.filter(libro => libro.id_book !== id);
-}
+    const eliminado = this.booksService.delete(id);
+    if (eliminado) {
+      this.books = this.booksService.getAll(); 
+    }
+  }
 }

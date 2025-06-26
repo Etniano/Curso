@@ -1,0 +1,59 @@
+.add-book-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+
+.formulario {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.formulario label {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  font-size: 0.95rem;
+  color: #ffffff;
+}
+
+.formulario input {
+  padding: 0.7rem;
+  border: none;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.formulario input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.formulario button {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.formulario button:hover {
+  background-color: #43a047;
+}

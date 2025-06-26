@@ -1,26 +1,15 @@
 <section class="books-section">
-
   <h2>Catálogo de Libros</h2>
 
-  <form class="formulario" (ngSubmit)="agregarLibro()">
-    <input type="text" placeholder="Título" [(ngModel)]="nuevoLibro.title" name="title" required />
-    <input type="text" placeholder="Autor" [(ngModel)]="nuevoLibro.author" name="author" required />
-    <input type="number" placeholder="Precio" [(ngModel)]="nuevoLibro.price" name="price" required />
-    <input type="text" placeholder="URL de imagen" [(ngModel)]="nuevoLibro.photo" name="photo" required />
-    <button type="submit">Añadir libro</button>
-  </form>
+  <div *ngIf="books.length > 0; else sinLibros" class="contenedor-cards">
+    <app-card
+      *ngFor="let libro of books"
+      [libro]="libro"
+      (eliminar)="eliminarLibro($event)"
+    ></app-card>
+  </div>
 
-<div *ngIf="books.length > 0; else sinLibros" class="contenedor-cards">
-  <app-card
-  *ngFor="let libro of books"
-  [libro]="libro"
-  (eliminar)="eliminarLibro($event)"
-></app-card>
-
-</div>
-
-<ng-template #sinLibros>
-  <p>No hay libros disponibles. ¡Agrega alguno!</p>
-</ng-template>
-
+  <ng-template #sinLibros>
+    <p>No hay libros disponibles. ¡Agrega alguno!</p>
+  </ng-template>
 </section>
